@@ -1,4 +1,25 @@
-# Push Button Arm Wrestling
+<h1 align="center"> Button Wars! </h1> <br>
+<p align="center">
+</p>
+
+<p align="center">
+  Can you click the fastest?
+</p>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [Introduction](#introduction)
+- [The Team](#The-Team)
+- [Features](#features)
+- [How-To](#How-To)
+- [Acknowledgments](#acknowledgments)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Introduction
+
 Every wanted to try arm wrestling, but you have weak arms?
 Are you a pro gamer who knows how to mash a button?
 Gamers and weaklings rejoice, because we have a solution for you! Using our uniquely crafted Arduino setup, we can use a
@@ -8,5 +29,25 @@ a buff to the other player! Who can win in this game of wits? Play our game and 
 # The Team
 Srinanda "Nandu" Yallapragada <syallapragad@umass.edu> Hardware Support
 Edward "Eddie" Hines <ehines@umass.edu> Software Support
-# Problems
-There is some unpredictable behavior with our code on our Ardunio. We need to figure that out. We also need to finish decorating our enclosure so it looks nice. :3
+
+
+## Features
+
+Some of the notable feature are
+
+* Uses servo motors to turn the arm
+* Arduino Uno R3 powered
+* LEDs used to indicate status of the game
+* Uses Passive Buzzer to indicate end of game
+* Battery operated, its a portable game!
+* Up to 3 players at a time! Two adversaries and a joker. 
+* Hidden game mechanics! Use your wits to play with tactics.
+
+
+## How-To
+
+- Simple connect the device to an arduino IDE and upload the code in the git hub to run the game!
+
+## Acknowledgments
+
+Thanks to HackUMass 2022 for hosting this event and providing us with the hardware and guidance to comlete this 36 hour hackathon.
