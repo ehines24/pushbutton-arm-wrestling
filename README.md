@@ -13,7 +13,6 @@
 - [Introduction](#introduction)
 - [The Team](#The-Team)
 - [Features](#features)
-- [Feedback](#feedback)
 - [How-To](#How-To)
 - [Acknowledgments](#acknowledgments)
 
