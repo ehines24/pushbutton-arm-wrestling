@@ -11,7 +11,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [The Team](#TheTeam)
+- [The Team](#The-Team)
 - [Features](#features)
 - [Feedback](#feedback)
 - [How-To](#How-To)
