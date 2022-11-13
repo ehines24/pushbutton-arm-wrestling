@@ -5,8 +5,8 @@
 
 
 // constants won't change. They're used here to set pin numbers:
-const int player1 = 2;           // pin of player 2
-const int player2 = 3;           // pin of player 1
+const int player1 = 3;           // pin of player 1
+const int player2 = 2;           // pin of player 2
 const int LEDButtonPin = 7;      // pin of the led button
 const int LEDgreen = 12;         // pin of the green LED
 const int LEDred = 10;           //pin of the red LED
@@ -115,7 +115,7 @@ void loop() {
   player1State = digitalRead(player1);
   player2State = digitalRead(player2);
   buttonStateLED = digitalRead(LEDButtonPin);  // Check the LED button to see if it is pressed down
-  if (buttonStateLED == HIGH) {
+  if (buttonStateLED) {
     do_penalize = 1;
     digitalWrite(LEDgreen, 1);
   } else {
@@ -126,13 +126,14 @@ void loop() {
   (1) Penalize the player if the LED isn't illuminated (buff the other player's button pushing power)
   (2) Reward the player for pressing the button by changing the Servo angle
 */
-  if(player1State || !lastplayer1State) {
+  Serial.println(lastplayer1State);
+  if(player1State == 0 && lastplayer1State == 1) {
     if (do_penalize == 1) {
       //Serial.println("dont_penalize == 1");
        angle += player1_increment;
-       lastplayer1State = 1;
     } else if (do_penalize == 0) {
       //Serial.println("dont_penalize == 0");
+
       player2_decrement -= penalty;
     }
     Serial.print("angle: ");
@@ -140,24 +141,25 @@ void loop() {
     Serial.print(" strength: ");
     Serial.println(player1_increment); 
   } else {
-    lastplayer1State = 0;
+    lastplayer1State = 1;
   }
   
-  if(player2State) {
+  if(player2State == 0 && lastplayer2State == 1) {
+    lastplayer2State = 0;
     if (do_penalize == 1) {
       //Serial.println("dont_penalize == 1");
-      lastplayer2State = 1;
       angle += player2_decrement;
     } else if (do_penalize == 0) {
       //Serial.println("dont_penalize == 0");
       player1_increment += penalty;
     }    
+    Serial.println(lastplayer2State);
     Serial.print("angle: ");
     Serial.print(angle);
     Serial.print(" strength: ");
     Serial.println(player2_decrement); 
   } else {
-    lastplayer2State = 0;
+    lastplayer2State = 1;
   }
  
 
