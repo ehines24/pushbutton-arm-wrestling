@@ -11,7 +11,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [The Team](#TheTeam)
+- [The Team](#The Team)
 - [Features](#features)
 - [Feedback](#feedback)
 - [Contributors](#contributors)
@@ -30,7 +30,7 @@ Gamers and weaklings rejoice, because we have a solution for you! Using our uniq
 Servo motor to simulate an arm wrestling match. All you have to do is mash the buttons!
 Be careful though! There is a third player who controls an LED. If the player isn't lighting the LED, you will give
 a buff to the other player! Who can win in this game of wits? Play our game and find out!
-# TheTeam
+# The Team
 Srinanda "Nandu" Yallapragada <syallapragad@umass.edu> Hardware Support
 Edward "Eddie" Hines <ehines@umass.edu> Software Support
 
