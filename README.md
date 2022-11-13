@@ -15,6 +15,7 @@
 - [Features](#features)
 - [How-To](#How-To)
 - [Acknowledgments](#acknowledgments)
+- [Lore](#Lore)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -44,10 +45,10 @@ Some of the notable feature are
 * Hidden game mechanics! Use your wits to play with tactics.
 
 
-## How-To
-
-- Simple connect the device to an arduino IDE and upload the code in the git hub to run the game!
-
 ## Acknowledgments
 
-Thanks to HackUMass 2022 for hosting this event and providing us with the hardware and guidance to comlete this 36 hour hackathon.
+Thanks to HackUMass 2022 for hosting this event and providing us with the hardware and guidance to complete this 36 hour hackathon.
+
+## Lore
+
+At the beginning of all, there were two factions. The button Tappers, and the click buttoners. After being at their throats for over 300 decades, a fragile treaty was signed, and the open war became a quiet one. They disagreed on the most essential artifacts of life. Hair styles, fighting styles, taps vs clicks, green vs blue. Their differences never end, and now you have been dragged into their silent war.... 
