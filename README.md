@@ -14,7 +14,6 @@
 - [The Team](#TheTeam)
 - [Features](#features)
 - [Feedback](#feedback)
-- [Contributors](#contributors)
 - [How-To](#How-To)
 - [Acknowledgments](#acknowledgments)
 
