@@ -37,25 +37,16 @@ Edward "Eddie" Hines <ehines@umass.edu> Software Support
 
 ## Features
 
-A few of the things you can do with GitPoint:
+Some of the notable feature are
 
-* View user activity feed
-* Communicate on your issue and pull request conversations
-* Close or lock issues
-* Apply labels and assignees
-* Review and merge pull requests
-* Create new issues
-* Star, watch and fork repositories
-* Control your unread and participating notifications
-* Easily search for any user or repository
+* Uses servo motors to turn the arm
+* Arduino Uno R3 powered
+* LEDs used to indicate status of the game
+* Uses Passive Buzzer to indicate end of game
+* Battery operated, its a portable game!
+* Up to 3 players at a time! Two adversaries and a joker. 
+* Hidden game mechanics! Use your wits to play with tactics.
 
-<p align="center">
-  <img src = "http://i.imgur.com/IkSnFRL.png" width=700>
-</p>
-
-<p align="center">
-  <img src = "http://i.imgur.com/0iorG20.png" width=700>
-</p>
 
 ## Feedback
 
