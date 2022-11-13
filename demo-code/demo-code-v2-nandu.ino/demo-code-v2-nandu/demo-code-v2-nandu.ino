@@ -56,14 +56,27 @@ void button_handler_p2() {
 }
 
 
-void player_victory(String player_number){
-  Serial.print("Player " + player_number + " wins!\n");
+// Play a sequence of n frequencies from a frequency array with delay_time ms in between
+void musical(int freq_array[], int delay_time, int n) {
+  for(int i = 0; i < n; i++) {
+    tone(buzzerPin, freq_array[i]);
+    delay(delay_time);
+  }
+  noTone(buzzerPin);
+}
+
+void player_victory(int player_number){
+  Serial.print("Player " + String(player_number) + " wins!\n");
   //maybe add a siren or some kind of visual alert that indicates a victory.
   digitalWrite(LEDgreen, 0);
   digitalWrite(LEDred, HIGH);//to indicate visually that the game has ended
-  tone(buzzerPin, 440); // A4
-  delay(1000);
-  noTone(buzzerPin);
+  if(player_number == 1) {
+    int freq_array[5] = {392, 440, 523.3, 587.3, 659.3};
+    musical(freq_array, 500, 5);
+  } else {
+    int freq_array[8] = {392, 440, 523.3, 587.3, 659.3, 587.3, 523.3, 587.3};
+    musical(freq_array, 500, 8);
+  }
   delay(4000);
   digitalWrite(LEDred, LOW);//reset red light
   setup();
@@ -108,10 +121,10 @@ void loop() {
 
   //check victory condition
   if(angle <= 0){
-    player_victory("2");
+    player_victory(2);
   }
   else if (angle >= 180){
-    player_victory("1");    
+    player_victory(1);    
   }
 
   wrestling_arm.write(angle);
