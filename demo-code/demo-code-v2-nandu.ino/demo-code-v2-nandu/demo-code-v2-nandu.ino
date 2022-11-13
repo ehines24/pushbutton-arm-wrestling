@@ -18,7 +18,7 @@ Servo wrestling_arm;             // create servo object to control a servo
 int angle = 90;                  // inital angle of the Servo. Tracks the game state. takes [0,180]. If it hits either value the game ends.
 int player1_increment;           // The init value of increment for pressing the button (player1) //see setup
 int player2_decrement;           // The init value of decrement for pressing the button (player2) // see setp
-volatile int dont_penalize = 1;  //bool to be checked before applying penalty. If 0, apply penalty.
+volatile int do_penalize = 1;  //bool to be checked before applying penalty. If 0, apply penalty.
 int penalty = 4; // Penalty incurred if you press the button when the light is off
 int lastplayer1State = 0;       // last state of the player buttons on/off to prevent 
 int lastplayer2State = 0;
@@ -101,8 +101,8 @@ void setup() {
   pinMode(player2, INPUT_PULLUP);
   pinMode(LEDButtonPin, INPUT_PULLUP);
   // attach the interupts and trigger them when the button is released
-  attachInterrupt(digitalPinToInterrupt(player1), button_handler_p1, FALLING);
-  attachInterrupt(digitalPinToInterrupt(player2), button_handler_p2, FALLING);
+  //attachInterrupt(digitalPinToInterrupt(player1), button_handler_p1, FALLING);
+  //attachInterrupt(digitalPinToInterrupt(player2), button_handler_p2, FALLING);
   // attach the Servo and set it to 90 degrees (the middle)(I.E starting position for the game)
   wrestling_arm.attach(9);
   wrestling_arm.write(angle);
@@ -116,11 +116,10 @@ void loop() {
   player2State = digitalRead(player2);
   buttonStateLED = digitalRead(LEDButtonPin);  // Check the LED button to see if it is pressed down
   if (buttonStateLED == HIGH) {
-    dont_penalize = 1;
+    do_penalize = 1;
     digitalWrite(LEDgreen, 1);
   } else {
-    dont_penalize = 0;
-    di
+    do_penalize = 0;
     digitalWrite(LEDgreen, 0);
   }
   /* The two game buttons are polled and the following happens:
@@ -128,11 +127,11 @@ void loop() {
   (2) Reward the player for pressing the button by changing the Servo angle
 */
   if(player1State || !lastplayer1State) {
-    if (dont_penalize == 1) {
+    if (do_penalize == 1) {
       //Serial.println("dont_penalize == 1");
        angle += player1_increment;
        lastplayer1State = 1;
-    } else if (dont_penalize == 0) {
+    } else if (do_penalize == 0) {
       //Serial.println("dont_penalize == 0");
       player2_decrement -= penalty;
     }
@@ -145,11 +144,11 @@ void loop() {
   }
   
   if(player2State) {
-    if (dont_penalize == 1) {
+    if (do_penalize == 1) {
       //Serial.println("dont_penalize == 1");
       lastplayer2State = 1;
       angle += player2_decrement;
-    } else if (dont_penalize == 0) {
+    } else if (do_penalize == 0) {
       //Serial.println("dont_penalize == 0");
       player1_increment += penalty;
     }    
