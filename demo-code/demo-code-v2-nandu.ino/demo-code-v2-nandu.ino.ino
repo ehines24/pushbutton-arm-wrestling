@@ -1,5 +1,6 @@
 #include <Servo.h>
 
+
 // constants won't change. They're used here to set pin numbers:
 const int player1 = 2;  // pin of player 2
 const int player2 = 3;  // pin of player 1
@@ -12,7 +13,7 @@ Servo wrestling_arm;  // create servo object to control a servo
 int angle = 90; // inital angle of the Servo. Tracks the game state. takes [0,180]. If it hits either value the game ends.
 int player1_increment; // The init value of increment for pressing the button (player1) //see setup
 int player2_decrement; // The init value of decrement for pressing the button (player2) // see setp
-int dont_penalize = 1; //bool to be checked before applying penalty. If 0, apply penalty. 
+volatile int dont_penalize = 1; //bool to be checked before applying penalty. If 0, apply penalty. 
 
 
 
@@ -25,6 +26,7 @@ void button_handler_p1() {
   if (dont_penalize == 1){
     //Serial.println("dont_penalize == 1");
     angle+=player1_increment;
+    
   }
   else if (dont_penalize == 0){
     //Serial.println("dont_penalize == 0");
@@ -32,8 +34,8 @@ void button_handler_p1() {
   }
    
   
-  //Serial.print(angle);
-  //Serial.print("\n");
+  Serial.print(angle);
+  Serial.print("\n");
 }
 
 void button_handler_p2() {
@@ -47,8 +49,8 @@ void button_handler_p2() {
     player1_increment += 4;
   } 
   
-  //Serial.print(angle);
-  //Serial.print("\n");
+  Serial.print(angle);
+  Serial.print("\n");
 }
 
 
@@ -69,7 +71,7 @@ void setup() {
   Serial.print("Set to starting game position\n");
   angle = 90; //starting angle in the middle. Equal game state for both players.
   player1_increment = 2;
-  player2_decrement = -2.75;
+  player2_decrement = -2;
   // initialize the LED pin as an output:
   pinMode(LEDgreen, OUTPUT);
   // initialize the LED pin as an output:
