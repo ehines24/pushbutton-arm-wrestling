@@ -47,7 +47,7 @@ Some of the notable feature are
 
 ## How-To
 
-- Simple connect the device to an arduino IDE and upload the code in the git hub to run the game!
+- Simply connect the device to an arduino IDE and upload the code in the git hub to run the game!
 
 ## Acknowledgments
 
