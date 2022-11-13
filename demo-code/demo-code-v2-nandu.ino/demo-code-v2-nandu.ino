@@ -1,5 +1,7 @@
 #include <Servo.h>
 
+// try to use mutexes to solve the problem, but no mutex library because arduino weak as shit and we cannot have nice things in life.
+
 
 // constants won't change. They're used here to set pin numbers:
 const int player1 = 2;  // pin of player 2
