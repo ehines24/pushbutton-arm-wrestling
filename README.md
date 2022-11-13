@@ -15,6 +15,7 @@
 - [Features](#features)
 - [How-To](#How-To)
 - [Acknowledgments](#acknowledgments)
+- [Lore](#Lore)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -50,4 +51,8 @@ Some of the notable feature are
 
 ## Acknowledgments
 
-Thanks to HackUMass 2022 for hosting this event and providing us with the hardware and guidance to comlete this 36 hour hackathon.
+Thanks to HackUMass 2022 for hosting this event and providing us with the hardware and guidance to complete this 36 hour hackathon.
+
+## Lore
+
+At the beggining of all, there were two factions. The button Tappers, and the click buttoners. After being at their throats for over 300 decades, 
