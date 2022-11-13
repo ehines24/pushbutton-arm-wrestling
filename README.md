@@ -8,3 +8,5 @@ a buff to the other player! Who can win in this game of wits? Play our game and 
 # The Team
 Srinanda "Nandu" Yallapragada <syallapragad@umass.edu> Hardware Support
 Edward "Eddie" Hines <ehines@umass.edu> Software Support
+# Problems
+There is some unpredictable behavior with our code on our Ardunio. We need to figure that out. We also need to finish decorating our enclosure so it looks nice. :3
