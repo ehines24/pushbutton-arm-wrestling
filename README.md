@@ -45,10 +45,6 @@ Some of the notable feature are
 * Hidden game mechanics! Use your wits to play with tactics.
 
 
-## How-To
-
-- Simply connect the device to an arduino IDE and upload the code in the git hub to run the game!
-
 ## Acknowledgments
 
 Thanks to HackUMass 2022 for hosting this event and providing us with the hardware and guidance to complete this 36 hour hackathon.
