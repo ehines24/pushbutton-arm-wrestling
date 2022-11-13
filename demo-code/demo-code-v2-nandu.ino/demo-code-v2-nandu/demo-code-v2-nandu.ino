@@ -72,9 +72,12 @@ void player_victory(int player_number){
   digitalWrite(LEDred, HIGH);//to indicate visually that the game has ended
   if(player_number == 1) {
     int freq_array[5] = {392, 440, 523.3, 587.3, 659.3};
+    wrestling_arm.write(180);
     musical(freq_array, 500, 5);
+    
   } else {
     int freq_array[8] = {392, 440, 523.3, 587.3, 659.3, 587.3, 523.3, 587.3};
+    wrestling_arm.write(0);
     musical(freq_array, 500, 8);
   }
   delay(4000);
